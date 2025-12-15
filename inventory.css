@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+.header p {
+    margin-top: 8px;
+    color: #ccc;
+}
+
+/* Inventory Grid */
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Car Card */
+.car-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h2 {
+    padding: 15px;
+    font-size: 22px;
+}
+
+.price {
+    padding: 0 15px;
+    color: #2c7be5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Details */
+.car-card ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.car-card ul li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Button */
+.car-card button {
+    width: calc(100% - 30px);
+    margin: 0 15px 20px;
+    padding: 12px;
+    background: #2c7be5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.car-card button:hover {
+    background: #1a5dc9;
+}
