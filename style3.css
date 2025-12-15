@@ -1,0 +1,165 @@
+/* --- Global Styles & Reset --- */
+:root {
+    /* NEW COLORS: Sleek Teal/Cyan Scheme */
+    --primary-color: #00b0ff; /* Bright Cyan/Teal for Prices/Buttons */
+    --secondary-color: #1e272e; /* Deep Charcoal for Header/Footer */
+    --accent-color: #ffeb3b; /* Bright Gold/Yellow for Highlights */
+    --background-color: #f3f4f6; /* Very Light Grey Background */
+    --card-background: #ffffff; /* White card background */
+    --text-color: #333333; /* Dark text for readability */
+    
+    /* Vehicle Tags (Unchanged but ensuring contrast) */
+    --car-tag-color: #28a745; /* Green for CAR tag */
+    --bike-tag-color: #dc3545; /* Red for BIKE tag */
+
+    /* Upgrade Borders */
+    --performance-color: #dc3545; /* Red for power */
+    --aesthetic-color: #ffc107; /* Yellow for looks (using the old accent for definition) */
+    --utility-color: #17a2b8; /* Cyan for function */
+    --bike-focus-color: #28a745; /* Green for bikes */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background: var(--secondary-color); /* Deep Charcoal */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-color); /* Cyan border */
+}
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Cyan logo text */
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color); /* Gold hover text */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--secondary-color); /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    /* You can also use a dark background image filter here */
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: var(--primary-color); /* Cyan button */
+    color: var(--secondary-color); /* Dark text on bright button */
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #008ccf; /* Slightly darker cyan on hover */
+    border-color: #008ccf;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color); /* Dark button */
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+/* --- Comparison Grid & Cards --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--primary-color); /* Cyan titles */
+}
+
+.price-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color); /* Cyan for the main price */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.country-compare {
+    font-size: 0.8rem;
+    color: #4a5568; /* Slightly muted text for the secondary price */
+    font-weight: 500;
+}
+
+/* --- NEW: Upgrades Section Styling --- */
+/* Update border colors in the upgrades section to use the new variables */
+.upgrade-item.performance {
+    border-left-color: var(--performance-color);
+}
+.upgrade-item.aesthetic {
+    border-left-color: var(--aesthetic-color);
+}
+.upgrade-item.utility {
+    border-left-color: var(--utility-color);
+}
+.upgrade-item.bike-focus {
+    border-left-color: var(--bike-focus-color);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background: var(--secondary-color); /* Deep Charcoal */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: var(--accent-color); /* Gold links */
+    margin: 0 10px;
+    text-decoration: none;
+}
+/* ... rest of the CSS remains the same ... */
+/* --- NEW: Upgrades Section Styling --- */
+
+.upgrade-item {
+    /* ... existing styling ... */
+    position: relative; /* Needed if you want to use absolute positioning on a pseudo-element */
+    padding-left: 50px; /* Make space for the icon/image */
+    
+    /* 👇 ADDED: A small, relevant icon for all upgrades */
+    background-image: url('icons/wrench-icon.svg'); /* Change this based on the item type */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Positioned 10px from the left, centered vertically */
+    background-size: 30px; /* Size of the icon */
+}
+
+@media(max-width: 600px){
+    h1{font: size 100px; forced-color-adjust: var(--accent-color);}
+
+}
